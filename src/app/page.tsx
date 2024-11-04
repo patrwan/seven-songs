@@ -44,7 +44,7 @@ export default function Home() {
         
       })
     } catch (error) {
-      console.log()
+      console.log(error)
     }
   }
 
