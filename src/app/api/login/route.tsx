@@ -1,5 +1,3 @@
-import { redirect } from "next/dist/server/api-utils"
-
 function randomString(length: number) {
     const chars = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
     let result = "";
