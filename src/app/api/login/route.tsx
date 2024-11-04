@@ -15,7 +15,7 @@ export async function GET() {
     const response_type = 'code'
     const client_id = '496a07f9827045c88b10b89ff5923ae5'
     const scope = 'user-read-private user-read-email user-top-read'
-    const redirect_uri = 'http://localhost:3000'
+    const redirect_uri = 'https://seven-songs.vercel.app/'
     const state = randomString(16)
     return Response.redirect("https://accounts.spotify.com/authorize?response_type="+response_type+"&client_id="+client_id+"&scope="+scope+"&redirect_uri="+redirect_uri+"&state="+state)
 }

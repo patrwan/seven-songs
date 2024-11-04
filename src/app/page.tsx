@@ -30,7 +30,7 @@ export default function Home() {
       const searchParams = new URLSearchParams({
         code: spotifyCode,
         grant_type: "authorization_code",
-        redirect_uri: "http://localhost:3000",
+        redirect_uri: "https://seven-songs.vercel.app/",
       })
 
       axios.post("https://accounts.spotify.com/api/token", searchParams, {
@@ -44,7 +44,7 @@ export default function Home() {
         
       })
     } catch (error) {
-      console.log(error)
+      console.log()
     }
   }
 
