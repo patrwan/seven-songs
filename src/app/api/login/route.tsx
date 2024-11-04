@@ -8,14 +8,14 @@ function randomString(length: number) {
   }
   
 
-export async function GET(request: Request, response: Response) {
+export async function GET() {
 
     
 
-    let response_type = 'code'
-    let client_id = '496a07f9827045c88b10b89ff5923ae5'
-    let scope = 'user-read-private user-read-email user-top-read'
-    let redirect_uri = 'http://localhost:3000'
-    let state = randomString(16)
+    const response_type = 'code'
+    const client_id = '496a07f9827045c88b10b89ff5923ae5'
+    const scope = 'user-read-private user-read-email user-top-read'
+    const redirect_uri = 'http://localhost:3000'
+    const state = randomString(16)
     return Response.redirect("https://accounts.spotify.com/authorize?response_type="+response_type+"&client_id="+client_id+"&scope="+scope+"&redirect_uri="+redirect_uri+"&state="+state)
 }

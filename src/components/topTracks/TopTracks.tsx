@@ -14,7 +14,7 @@ export default function TopTracks() {
     const elementRef = useRef(null);
 
     async function getTopTracks() {
-        let accessToken = localStorage.getItem('access_token');
+        const accessToken = localStorage.getItem('access_token');
 
         const response = await fetch('https://api.spotify.com/v1/me/top/tracks?limit=7&time_range=short_term', {
             headers: {
@@ -50,6 +50,14 @@ export default function TopTracks() {
 
     return (
         <div className="w-96 flex-1 flex flex-col p-2 items-center ">
+            <Image
+                className="animate-pulse cursor-pointer hover:text-green-300"
+                src={"/download.png"}
+                width={32}
+                height={32}
+                alt="download icon"
+                onClick={() => htmlToImageConvert()}
+            />
             <p className="text-sm text-green-400">Descargar lista</p>
             <div ref={elementRef} className="w-96 flex-1 flex flex-col p-2 items-center" >
                 <h1

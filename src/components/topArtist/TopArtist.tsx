@@ -14,7 +14,7 @@ export default function TopArtist() {
     const elementRef = useRef(null);
 
     async function getTopArtists() {
-        let accessToken = localStorage.getItem('access_token');
+        const accessToken = localStorage.getItem('access_token');
 
         const response = await fetch('https://api.spotify.com/v1/me/top/artists?limit=7&time_range=short_term', {
             headers: {
@@ -23,7 +23,7 @@ export default function TopArtist() {
         });
 
         const data = await response.json();
-        console.log(data.items)
+        
         setTopArtists(data.items)
     }
 
