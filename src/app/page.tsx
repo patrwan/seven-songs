@@ -10,9 +10,6 @@ export default function Home() {
 
   const router = useRouter()
 
-  useEffect(()=>{
-    const token = localStorage.getItem("access_token");
-  },[])
   
   async function login() {
     window.location.replace("http://localhost:3000/api/login")
@@ -47,7 +44,7 @@ export default function Home() {
         
       })
     } catch (error) {
-
+      console.log(error)
     }
   }
 

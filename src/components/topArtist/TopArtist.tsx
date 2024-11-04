@@ -5,7 +5,6 @@ import { useEffect, useRef, useState } from "react";
 import { toPng } from 'html-to-image';
 
 import { IArtist } from "@/app/types/types";
-import Image from "next/image";
 
 export default function TopArtist() {
 
@@ -23,11 +22,11 @@ export default function TopArtist() {
         });
 
         const data = await response.json();
-        
+
         setTopArtists(data.items)
     }
 
-    const htmlToImageConvert = () => {
+    /*const htmlToImageConvert = () => 
         if (elementRef.current === null) {
             return
         }
@@ -43,7 +42,7 @@ export default function TopArtist() {
                 console.log(err);
             });
     };
-
+*/  
     useEffect(() => {
         getTopArtists();
     }, [])

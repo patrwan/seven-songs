@@ -11,10 +11,8 @@ export default function MainPage() {
 
   const [profile, setProfile] = useState<IProfile>({ display_name: "", images: [] });
 
-  const [topTracks, setTopTracks] = useState([]);
-
   async function getProfile() {
-    let accessToken = localStorage.getItem('access_token');
+    const accessToken = localStorage.getItem('access_token');
 
     const response = await fetch('https://api.spotify.com/v1/me', {
       headers: {
@@ -25,22 +23,6 @@ export default function MainPage() {
     const data = await response.json();
     //console.log(data)
     setProfile(data)
-  }
-
-  async function getTopTracks() {
-    let accessToken = localStorage.getItem('access_token');
-
-    const response = await fetch('https://api.spotify.com/v1/me/top/tracks?limit=10&time_range=medium_term', {
-      headers: {
-        Authorization: 'Bearer ' + accessToken
-      }
-    });
-
-    const data = await response.json();
-
-    //console.log(data)
-
-    setTopTracks(data.items)
   }
 
   useEffect(() => {
