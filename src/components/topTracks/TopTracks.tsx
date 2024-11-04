@@ -50,14 +50,6 @@ export default function TopTracks() {
 
     return (
         <div className="w-96 flex-1 flex flex-col p-2 items-center ">
-            <Image
-                className="animate-pulse cursor-pointer hover:text-green-300"
-                src={"/download.png"}
-                width={32}
-                height={32}
-                alt="download icon"
-                onClick={() => htmlToImageConvert()}
-            />
             <p className="text-sm text-green-400">Descargar lista</p>
             <div ref={elementRef} className="w-96 flex-1 flex flex-col p-2 items-center" >
                 <h1
