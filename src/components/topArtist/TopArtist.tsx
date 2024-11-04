@@ -2,7 +2,7 @@
 
 import { useEffect, useRef, useState } from "react";
 
-import { toPng } from 'html-to-image';
+//import { toPng } from 'html-to-image';
 
 import { IArtist } from "@/app/types/types";
 
