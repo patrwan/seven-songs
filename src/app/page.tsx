@@ -12,7 +12,7 @@ export default function Home() {
 
   
   async function login() {
-    window.location.replace("http://localhost:3000/api/login")
+    window.location.replace("https://seven-songs.vercel.app/api/login")
   }
 
 
