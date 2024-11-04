@@ -49,7 +49,7 @@ export default function TopTracks() {
     }, [])
 
     return (
-        <div className="w-96 flex-1 flex flex-col p-2 items-center ">
+        <div className="w-full flex-1 flex flex-col p-2 items-center ">
             <Image
                 className="animate-pulse cursor-pointer hover:text-green-300"
                 src={"/download.png"}
@@ -59,7 +59,7 @@ export default function TopTracks() {
                 onClick={() => htmlToImageConvert()}
             />
             <p className="text-sm text-green-400">Descargar lista</p>
-            <div ref={elementRef} className="w-96 flex-1 flex flex-col p-2 items-center" >
+            <div ref={elementRef} className=" flex-1 flex flex-col p-2 items-center" >
                 <h1
                     className=" h1 sm:w-full mb-2  rounded-m text-lg text-white text-center"
                     onClick={() => { }}><span className="text-green-400">Pato</span> top 7 del último mes

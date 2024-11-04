@@ -60,10 +60,10 @@ export default function TopArtist() {
                 {topArtists.map((artist: IArtist, index) => {
                     const image = artist.images[0].url
                     return (
-                        <div className={`bg-transparent w-full flex mb-4 shadow-md shadow-black rounded-xl`} key={artist.id}>
+                        <div className={`bg-transparent  flex mb-4 shadow-md shadow-black rounded-xl`} key={artist.id}>
                             { }
-                            <div className="bg-cover flex w-full rounded-xl" style={{ backgroundImage: `url('${image}')` }}>
-                                <div className="w-full rounded-xl bg-black flex items-center justify-center text-lg p-2 bg-opacity-85 hover:bg-opacity-40 cursor-pointer">
+                            <div className="bg-cover flex  rounded-xl" style={{ backgroundImage: `url('${image}')` }}>
+                                <div className=" rounded-xl bg-black flex items-center justify-center text-lg p-2 bg-opacity-85 hover:bg-opacity-40 cursor-pointer">
                                     <div className=" p-2">
                                         <p className="text-green-400 font-bold text-4xl h1">{index + 1}</p>
                                     </div>

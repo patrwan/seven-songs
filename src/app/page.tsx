@@ -12,7 +12,7 @@ export default function Home() {
 
   
   async function login() {
-    window.location.replace("https://seven-songs.vercel.app/api/login")
+    window.location.replace(process.env.NEXT_PUBLIC_URL+"/api/login")
   }
 
 
@@ -26,11 +26,12 @@ export default function Home() {
   }, [])
 
   const authUser = (spotifyCode: string) => {
+    const url = process.env.NEXT_PUBLIC_URL as string
     try {
       const searchParams = new URLSearchParams({
         code: spotifyCode,
         grant_type: "authorization_code",
-        redirect_uri: "https://seven-songs.vercel.app/",
+        redirect_uri: url,
       })
 
       axios.post("https://accounts.spotify.com/api/token", searchParams, {
