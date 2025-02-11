@@ -32,7 +32,7 @@ export default function TopTracks() {
             return
         }
 
-        toPng(elementRef.current, { cacheBust: false, width: 520, height: 1080, backgroundColor: "black" })
+        toPng(elementRef.current, { cacheBust: false, width: 1080, height: 1920, backgroundColor: "#3a3a3a" })
             .then((dataUrl) => {
                 const link = document.createElement("a");
                 link.download = "top_tracks.png";
@@ -59,7 +59,7 @@ export default function TopTracks() {
                 onClick={() => htmlToImageConvert()}
             />
             <p className="text-sm text-green-400">Descargar lista</p>
-            <div ref={elementRef} className=" flex-1 flex flex-col p-2 items-center" >
+            <div ref={elementRef} className="flex flex-col p-2 items-center justify-center" >
                 <h1
                     className=" h1 sm:w-full mb-2  rounded-m text-lg text-white text-center"
                     onClick={() => { }}><span className="text-green-400">Pato</span> top 7 del último mes
