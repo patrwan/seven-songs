@@ -49,20 +49,16 @@ export default function TopTracks() {
     }, [])
 
     return (
-        <div className="w-full flex-1 flex flex-col p-2 items-center ">
-            <Image
-                className="animate-pulse cursor-pointer hover:text-green-300"
-                src={"/download.png"}
-                width={32}
-                height={32}
-                alt="download icon"
-                onClick={() => htmlToImageConvert()}
-            />
-            <p className="text-sm text-green-400">Descargar lista</p>
+        <div className="w-full flex-1 flex flex-col p-2 items-center font-bold">
+            <div className="flex w-full space-x-4 justify-center my-4">
+                <button className="text-sm text-green-400 bg-neutral-800 p-2 rounded-md uppercase hover:bg-neutral-600" onClick={() => htmlToImageConvert()}>Compartir lista</button>
+                <button className="text-sm text-green-400 bg-neutral-800 p-2 rounded-md uppercase hover:bg-neutral-600" onClick={() => {}}>Generar guesser</button>
+            </div>
+
             <div ref={elementRef} className="flex flex-col p-2 items-center justify-center" >
                 <h1
                     className=" h1 sm:w-full mb-2  rounded-m text-lg text-white text-center"
-                    onClick={() => { }}><span className="text-green-400">Pato</span> top 7 del último mes
+                    onClick={() => { }}>
                 </h1>
 
 
@@ -77,11 +73,12 @@ export default function TopTracks() {
                                     <div className=" p-2">
                                         <p className="text-green-400 font-bold text-4xl h1">{index + 1}</p>
                                     </div>
-                                    <div className="w-1/2 min-h-28  flex items-center justify-center text-lg p-2 bg-opacity-75 hover:bg-opacity-40 cursor-pointer">
-                                        <p className="text-green-400 font-bold text-center ">{track.name}</p>
+                                    <div className="w-full min-h-28  flex flex-col  justify-center text-lg p-2 bg-opacity-75 hover:bg-opacity-40 cursor-pointer">
+                                        <p className="text-green-400 font-bold  ">{track.name}</p>
+                                        {artists.map(artist => (<p className="font-bold  text-white text-sm" key={artist.id}>{artist.name}</p>))}
                                     </div>
                                     <div className="w-1/2 min-h-16  flex flex-col items-center justify-center text-base bg-opacity-75 hover:bg-opacity-50 ">
-                                        {artists.map(artist => (<p className="font-bold text-center text-white" key={artist.id}>{artist.name}</p>))}
+                                        
                                     </div>
                                 </div>
                             </div>

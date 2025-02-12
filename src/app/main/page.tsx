@@ -30,7 +30,7 @@ export default function MainPage() {
   }, [])
 
   return (
-    <main className="flex flex-col bg-zinc-800 container m-auto ">
+    <main className="flex flex-col bg-zinc-950 container m-auto ">
       <div className="px-20 flex h-32 w-full p-2 items-center  bg-neutral-950 border-b-2 border-zinc-800 mb-32 sm:mb-28">
         {<img className="left-1/2 sm:left-80 rounded-full border-2 absolute top-20 -translate-x-1/2" src={profile?.images[0]?.url} height={32} width={128} />}
         <p className="left-1/2 sm:left-80 absolute top-32  text-center text-xl text-white h1 mt-24 -translate-x-1/2"><span className="text-green-400 font-bold text-4xl">{profile.display_name}</span> </p>
