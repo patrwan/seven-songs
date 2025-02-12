@@ -5,7 +5,6 @@ import { useEffect, useRef, useState } from "react";
 import { ITrack } from "@/app/types/types";
 
 import { toPng } from 'html-to-image';
-import Image from "next/image";
 
 export default function TopTracks() {
 
